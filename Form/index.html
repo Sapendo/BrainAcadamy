@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   
+</head>
+<body>
+    <h1>А знаете ли вы Javascript</h1>
+    <form>
+        <input type="text" name="first_name" placeholder="Ваше имя" maxlength="20" autocomplete="false">
+        <p id="nameError"></p>
+        <input type="text" name="phone" placeholder="(XXX)XXX-XX-XX" title="Ваш телефон" focus>
+        <p id="phoneError"></p>
+        <input type="number" name="age" placeholder="Ваш возраст" min="10" max="90">
+        <p id="ageError"></p>
+        <p>Ваш пол</p>
+        <label><input type="radio" name="gender" value="male">Мужской</label>
+        <label><input type="radio" name="gender" value="female" checked>Женский</label>
+        <p>Оцените ваши знания Javascript</p>
+        <select name="knowledge">
+            <option value="0">Не знаю</option>
+            <option value="1">Слышал</option>
+            <option value="2">Немного знаю</option>
+            <option value="3">Знаю</option>
+            <option value="4">Работаю</option>
+        </select>
+        <p>Что вы знаете?</p>
+        <label><input type="checkbox" name="jquery">jQuery</label>
+        <label><input type="checkbox" name="bootstrap">Bootstrap</label>
+        <input type="submit" value="Submit data">
+    </form>
+    <p id="succes"></p>
+    <script src="script.js"></script>
+</body>
+</html>
