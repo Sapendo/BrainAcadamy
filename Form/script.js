@@ -1,9 +1,5 @@
- var errors = document.getElementById('errors');
  var succes = document.getElementById('succes');
- var nameError = document.getElementById('nameError');
- var phoneError = document.getElementById('phoneError');
- var ageError = document.getElementById('ageError');
- var form = document.forms[0];
+  var form = document.forms[0];
  var input = document.getElementsByTagName('input');
 
  for (var i = 0; i < input.length; i++) {
@@ -44,13 +40,13 @@
      input.value = input.value.trim();
      var value = input.value;
      if (!value) {
-         showError("Это обязательное поле", false, nameError);
+         showError("Это обязательное поле", false, input.nextElementSibling);
          return false;
      } else if (value.length < 2) {
-         showError("Длина введенного значения должна быть больше одного символа", false, nameError);
+         showError("Длина введенного значения должна быть больше одного символа", false, input.nextElementSibling);
          return false;
      } else if (value.length > 20) {
-         showError("Длина введенного значения должна быть меньше 21 символа", false, nameError);
+         showError("Длина введенного значения должна быть меньше 21 символа", false, input.nextElementSibling);
          return false;
      } else
          return true;
@@ -60,13 +56,13 @@
      input.value = input.value.trim();
      var value = input.value;
      if (!value) {
-         showError("Это обязательное поле", false, ageError);
+         showError("Это обязательное поле", false, input.nextElementSibling);
          return false;
      } else if (isNaN(+value)) {
-         showError("Вы должны ввести число", false, ageError);
+         showError("Вы должны ввести число", false, input.nextElementSibling);
          return false;
      } else if (value < 10 || value > 90) {
-         showError("Значение должно быть в пределах 10..90", false, ageError);
+         showError("Значение должно быть в пределах 10..90", false, input.nextElementSibling);
          return false;
      } else
          return true;
@@ -85,7 +81,7 @@
  function validateTelephone(input) {
      var value = input.value;
      if (!/^\(0\d{2}\)\s?\d{3}-\d{2}-\d{2}$/.test(value)) {
-         showError("Введите телефон в формате (XXX)XXX-XX-XX", false, phoneError);
+         showError("Введите телефон в формате (XXX)XXX-XX-XX", false, input.nextElementSibling);
          return false;
      } else
          return true;
