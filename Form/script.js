@@ -1,5 +1,5 @@
- var succes = document.getElementById('succes');
-  var form = document.forms[0];
+ var infoSend = document.getElementById('infoSend');
+ var form = document.forms[0];
  var input = document.getElementsByTagName('input');
 
  for (var i = 0; i < input.length; i++) {
@@ -31,7 +31,7 @@
 
  function showError(text, success, place) {
      if (success)
-         succes.innerHTML = "<span style='color: green'>" + text + "</span>";
+         infoSend.innerHTML = "<span style='color: green'>" + text + "</span>";
      else
          place.innerHTML = "<span style='color: red'>" + text + "</span>";
  }

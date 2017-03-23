@@ -1,0 +1,28 @@
+.wrap {
+    width: 1000px;
+    height: 800px;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.show, .form {
+    width: 450px;
+    height: 400px;
+    border: 1px solid #ccc;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.form>* {
+    margin: 10px 30px;
+    outline: none;
+}
+textarea {
+    resize: none;
+    height: 150px;
+}
