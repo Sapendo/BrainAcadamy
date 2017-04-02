@@ -1,0 +1,31 @@
+img {              
+        width: 90px;
+        height: 90px;
+    }
+    .wrap {
+        margin: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        width: 250px;
+        position: relative;
+    }
+    td {
+        padding: 5px;
+    }
+    .secondCol {
+        text-align: right;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        
+    }
+    .headTable>* {
+        border-bottom: 1px solid #ccc;
+        font: bold 18px Arial;
+    }
+
+#weatherInfo {
+    display: flex;
+    flex-wrap: wrap;
+}
